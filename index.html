@@ -4,14 +4,9 @@
     <meta charset="UTF-8" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Hacker News Clone by Gav</title>
-    <script
-      crossorigin="anonymous"
-      src="//unpkg.com/react-scan/dist/auto.global.js"
-    ></script>
     <script type="module">
-      if (import.meta.env.DEV) {
+      if (import.meta.env.VITE_ENV === "dev") {
         const script = document.createElement("script");
         script.src = "//unpkg.com/react-scan/dist/auto.global.js";
         script.crossOrigin = "anonymous";
