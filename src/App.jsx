@@ -1,17 +1,9 @@
-import Search from "./components/home/search";
-import Footer from "./components/layout/footer";
-import Header from "./components/layout/header";
+import { RouterProvider } from "react-router-dom";
+
+import router from "./routes/router";
 
 function App() {
-  return (
-    <>
-      <Header />
-      <main>
-        <Search />
-      </main>
-      {/* <Footer /> */}
-    </>
-  );
+  return <RouterProvider router={router}/>
 }
 
 export default App;
