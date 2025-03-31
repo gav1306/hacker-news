@@ -10,8 +10,8 @@
       crossorigin="anonymous"
       src="//unpkg.com/react-scan/dist/auto.global.js"
     ></script>
-    <script>
-      if (import.meta.env.ENV === 'dev') {
+    <script type="module">
+      if (import.meta.env.DEV) {
         const script = document.createElement("script");
         script.src = "//unpkg.com/react-scan/dist/auto.global.js";
         script.crossOrigin = "anonymous";
