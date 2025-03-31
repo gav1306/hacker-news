@@ -1,5 +1,4 @@
 import { CalendarIcon } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
 import {
@@ -119,7 +118,7 @@ const DateRange = () => {
             mode="range"
             selected={{ from, to }}
             onSelect={selectedRangeHandler}
-            disabled={{ after: new Date() }}
+            disabled={{ after: moment().toDate() }}
             className="bg-primary rounded-md"
           />
         </div>

@@ -1,3 +1,5 @@
+import moment from "moment/moment";
+
 const getInitials = (str) => {
   const words = str.split(" ");
   const firstTwoLetters = words.map((word) => word.charAt(0)).slice(0, 2);
@@ -11,7 +13,7 @@ const dateFormatter = new Intl.DateTimeFormat("en-IN", {
 });
 
 const formatSecondsToDate = (seconds) => {
-  const date = new Date(seconds * 1000);
+  const date = moment(seconds * 1000).toDate();
   return dateFormatter.format(date);
 };
 
